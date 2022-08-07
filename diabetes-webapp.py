@@ -9,7 +9,7 @@ import numpy as np
 import pickle 
 import streamlit as st
 #loading the saved model
-loaded_model=pickle.load(open('E:/Diabetes prediction/trained_model.sav','rb'))
+loaded_model=pickle.load(open('trained_model.sav','rb'))
 #creating a function for prediciting
 
 def diabetes_prediction(input_data):
@@ -33,23 +33,22 @@ def diabetes_prediction(input_data):
   
     
 
-def main():
-    #giving a title
-    st.title('DIABETES PREDICTION WEBAPP')
+#giving a title
+st.title('DIABETES PREDICTION WEBAPP')
     # getting the input data from user
     #Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age
     
-    Pregnancies=st.text_input('Number of Pregnancies')
-    Glucose=st.text_input('Glucose Levels')
-    BloodPressure=st.text_input('Blood pressure value')
-    SkinThickness=st.text_input('SkinThickness value')
-    Insulin=st.text_input('Insulin Levels')
-    BMI=st.text_input('BMI value')
-    DiabetesPedigreeFunction=st.text_input('DiabetesPedigreeFunction Levels')
-    Age=st.text_input('age of the person')
+ Pregnancies=st.text_input('Number of Pregnancies')
+ Glucose=st.text_input('Glucose Levels')
+ BloodPressure=st.text_input('Blood pressure value')
+ SkinThickness=st.text_input('SkinThickness value')
+ Insulin=st.text_input('Insulin Levels')
+ BMI=st.text_input('BMI value')
+ DiabetesPedigreeFunction=st.text_input('DiabetesPedigreeFunction Levels')
+ Age=st.text_input('age of the person')
     
     #code for prediciton
-    diagnosis=''
+ diagnosis=''
     
     #creating a button  for prediction 
     if(st.button('Diabetes test result')):
@@ -57,6 +56,23 @@ def main():
     
     
     st.success(diagnosis)
+      
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
       
 
 
