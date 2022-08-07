@@ -38,27 +38,25 @@ st.title('DIABETES PREDICTION WEBAPP')
     # getting the input data from user
     #Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age
     
- Pregnancies=st.text_input('Number of Pregnancies')
- Glucose=st.text_input('Glucose Levels')
- BloodPressure=st.text_input('Blood pressure value')
- SkinThickness=st.text_input('SkinThickness value')
- Insulin=st.text_input('Insulin Levels')
- BMI=st.text_input('BMI value')
- DiabetesPedigreeFunction=st.text_input('DiabetesPedigreeFunction Levels')
- Age=st.text_input('age of the person')
+Pregnancies=st.text_input('Number of Pregnancies')
+Glucose=st.text_input('Glucose Levels')
+BloodPressure=st.text_input('Blood pressure value')
+SkinThickness=st.text_input('SkinThickness value')
+Insulin=st.text_input('Insulin Levels')
+BMI=st.text_input('BMI value')
+DiabetesPedigreeFunction=st.text_input('DiabetesPedigreeFunction Levels')
+Age=st.text_input('age of the person')
     
     #code for prediciton
- diagnosis=''
+diagnosis=''
     
     #creating a button  for prediction 
-    if(st.button('Diabetes test result')):
-        diagnosis=diabetes_prediction([Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age])
+if(st.button('Diabetes test result')):
+     diagnosis=diabetes_prediction([Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age])
     
     
-    st.success(diagnosis)
+st.success(diagnosis)
       
-
-
 
 
 
